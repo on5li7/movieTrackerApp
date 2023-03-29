@@ -13,3 +13,21 @@ The first warning, C0304, is indicating that there is no final newline at the en
 The second warning, C0114, is indicating that there is no module docstring in your code. A docstring is a string that appears at the beginning of a module, class, or function and provides documentation about what the code does. It is good practice to include a docstring to help other developers understand the purpose and usage of your code.
 
 After fixing those two errors, we got the green check for this project. 
+
+**Here are the screenshots of our machine with working projects:**
+
+Gafur
+
+![image](https://user-images.githubusercontent.com/101157079/227807836-91ae5935-dfe7-4e31-af19-f9b22e96e9b8.png)
+
+Sophie
+
+![image](https://user-images.githubusercontent.com/101157079/227807937-476fb9dc-b6a5-4647-a32f-56c43f92b7e2.png)
+
+Calvin
+
+![image](https://user-images.githubusercontent.com/101157079/227807901-25d9337d-7293-4a0c-ae50-248048176fcf.png)
+
+Ryan
+
+![image](https://user-images.githubusercontent.com/101157079/227853786-356ed51a-c0cb-4ed1-af16-e5334c32de90.png)
