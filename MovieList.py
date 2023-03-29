@@ -4,25 +4,25 @@ This class is for the movieLists object
 
 from movie import Movie
 
-class movieList:
-    def __init__(self, notWatched, watched):
-        self.notWatched = notWatched
+class MovieList:
+    def __init__(self, not_watched, watched):
+        self.notWatched = not_watched
         self.watched = watched
 
-    def addNewMovie(self, movie):
-        self.notWatched.append(movie)
+    def add_new_Movie(self, movie):
+        self.not_watched.append(movie)
 
-    def alreadyWatched(self, movie):
-        self.notWatched.remove(movie)
+    def already_watched(self, movie):
+        self.not_watched.remove(movie)
         self.watched.append(movie)
 
-    def displayAll(self):
+    def display_all(self):
         print("watched list")
-        for i in self.notWatched:
-            print(i.getTitle())
+        for i in self.not_watched:
+            print(i.get_title())
         print("not watched list")
         for i in self.watched:
-            print(i.getTitle())
+            print(i.get_title())
 
 def main():
     arr1 = []
@@ -32,16 +32,16 @@ def main():
     movie2= Movie("Titanic2", 2)
     movie3 = Movie("Titanic3", 2)
 
-    movieList1 = movieList(arr1, arr2)
+    movieList1 = MovieList(arr1, arr2)
 
-    movieList1.addNewMovie(movie1)
-    movieList1.addNewMovie(movie2)
-    movieList1.addNewMovie(movie3)
+    movieList1.add_new_Movie(movie1)
+    movieList1.add_new_Movie(movie2)
+    movieList1.add_new_Movie(movie3)
 
     # movieList1.displayAll()
-    movieList1.alreadyWatched(movie1)
+    movieList1.already_watched(movie1)
 
-    movieList1.displayAll()
+    movieList1.display_all()
 
 
 

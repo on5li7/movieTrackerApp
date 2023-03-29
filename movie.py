@@ -7,12 +7,12 @@ class Movie:
         self.title = title
         self.rating = rating
 
-    def getTitle(self):
+    def get_title(self):
         return self.title
 
-    def setRating(self, rating):
+    def set_rating(self, rating):
         self.rating = rating
 
-    def getRating(self):
+    def get_rating(self):
         return self.rating
     
