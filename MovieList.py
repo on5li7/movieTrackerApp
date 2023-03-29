@@ -1,3 +1,7 @@
+'''
+This class is for the movieLists object
+'''
+
 from movie import Movie
 
 class MovieList:
