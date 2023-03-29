@@ -4,7 +4,7 @@ This class is for the movieLists object
 
 from movie import Movie
 
-class MovieList:
+class movieList:
     def __init__(self, notWatched, watched):
         self.notWatched = notWatched
         self.watched = watched
@@ -32,7 +32,7 @@ def main():
     movie2= Movie("Titanic2", 2)
     movie3 = Movie("Titanic3", 2)
 
-    movieList1 = MovieList(arr1, arr2)
+    movieList1 = movieList(arr1, arr2)
 
     movieList1.addNewMovie(movie1)
     movieList1.addNewMovie(movie2)
@@ -47,5 +47,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
