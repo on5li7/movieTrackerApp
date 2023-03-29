@@ -1,3 +1,8 @@
+"""
+This module defines the Movie class, which represents a movie object.
+"""
+
+
 class Movie:
     """
     This class represents a movie object.
