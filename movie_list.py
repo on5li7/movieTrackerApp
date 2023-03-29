@@ -6,10 +6,10 @@ from movie import Movie
 
 class MovieList:
     def __init__(self, not_watched, watched):
-        self.notWatched = not_watched
+        self.not_watched = not_watched
         self.watched = watched
 
-    def add_new_Movie(self, movie):
+    def add_new_movie(self, movie):
         self.not_watched.append(movie)
 
     def already_watched(self, movie):
@@ -34,9 +34,9 @@ def main():
 
     movieList1 = MovieList(arr1, arr2)
 
-    movieList1.add_new_Movie(movie1)
-    movieList1.add_new_Movie(movie2)
-    movieList1.add_new_Movie(movie3)
+    movieList1.add_new_movie(movie1)
+    movieList1.add_new_movie(movie2)
+    movieList1.add_new_movie(movie3)
 
     # movieList1.displayAll()
     movieList1.already_watched(movie1)
