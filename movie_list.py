@@ -48,10 +48,10 @@ class MovieList:
         Displays all movies in the lists of watched and unwatched movies.
         """
         print("watched list")
-        for i in self.not_watched:
+        for i in self.watched:
             print(i.get_title())
         print("not watched list")
-        for i in self.watched:
+        for i in self.not_watched:
             print(i.get_title())
 
 def main():
