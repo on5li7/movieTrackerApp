@@ -61,20 +61,30 @@ def main():
     arr1 = []
     arr2 = []
 
-    movie1 = Movie("Titanic", 2)
-    movie2= Movie("Titanic2", 2)
-    movie3 = Movie("Titanic3", 2)
+    movie = input("Enter a movie you watched: ")
+    rating = input("Enter a rating for the movie: ")
 
-    movie_list1 = MovieList(arr1, arr2)
+    movie1 = Movie(movie, rating)
 
-    movie_list1.add_new_movie(movie1)
-    movie_list1.add_new_movie(movie2)
-    movie_list1.add_new_movie(movie3)
+    movie_list = MovieList(arr1, arr2)
+
+    movie_list.add_new_movie(movie1)
+    movie_list.display_all()
+
+    #movie1 = Movie("Titanic", 2)
+    #movie2= Movie("Titanic2", 2)
+    #movie3 = Movie("Titanic3", 2)
+
+    #movie_list1 = MovieList(arr1, arr2)
+
+    #movie_list1.add_new_movie(movie1)
+    #movie_list1.add_new_movie(movie2)
+    #movie_list1.add_new_movie(movie3)
 
     # movie_list1.displayAll()
-    movie_list1.already_watched(movie1)
+    #movie_list1.already_watched(movie1)
 
-    movie_list1.display_all()
+    #movie_list1.display_all()
 
 if __name__ == "__main__":
     main()
