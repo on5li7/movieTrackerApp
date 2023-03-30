@@ -64,11 +64,17 @@ def main():
     movie = input("Enter a movie you watched: ")
     rating = input("Enter a rating for the movie: ")
 
+    not_watched_movie = input("Enter a movie you have not watched but want to: ")
+    not_watched_rating = 0
+
     movie1 = Movie(movie, rating)
+    movie2 = Movie(not_watched_movie, not_watched_rating)
 
     movie_list = MovieList(arr1, arr2)
 
     movie_list.add_new_movie(movie1)
+    movie_list.add_new_movie(movie2)
+    movie_list.already_watched(movie1)
     movie_list.display_all()
 
     #movie1 = Movie("Titanic", 2)
