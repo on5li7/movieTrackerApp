@@ -58,6 +58,7 @@ def main():
     """
     The main function of the program.
     """
+    
     arr1 = []
     arr2 = []
 
