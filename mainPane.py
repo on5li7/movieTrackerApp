@@ -1,7 +1,3 @@
-'''
-This displays the unwatch movie list.
-'''
-
 from graphics import *
 from movie_list import MovieList
 from movie import Movie
