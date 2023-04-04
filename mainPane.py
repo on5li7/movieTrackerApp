@@ -1,4 +1,4 @@
-from graphics import *
+Pfrom graphics import *
 
 win = GraphWin("My Graphics Window", 900, 900)
 win.setBackground("white")
