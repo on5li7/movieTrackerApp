@@ -1,31 +1,20 @@
-'''
-This displays the unwatch movie list.
-'''
+Pfrom graphics import *
 
-from graphics import *
-from movie_list import MovieList
+win = GraphWin("My Graphics Window", 900, 900)
+win.setBackground("white")
 
-# create a window
-win = GraphWin("Movie List", 900, 600)
+# Draw a rectangle
+rect = Rectangle(Point(100, 100), Point(200, 200))
+rect.setFill("red")
+rect.draw(win)
 
-# create a list of movies
-movies = ["The Shawshank Redemption", "The Godfather", "The Dark Knight", "The Godfather: Part II", "12 Angry Men"]
+# Draw a circle
+circle = Circle(Point(300, 300), 50)
+circle.setFill("blue")
+circle.draw(win)
 
-movie_objects = []
-for i, movie in enumerate(movies):
-    # create rectangle
-    rect = Rectangle(Point(50, 30 + i*60), Point(350, 80 + i*60))
-    rect.setOutline("black")
-    rect.draw(win)
-    # create text object
-    text = Text(Point(200, 55 + i*60), f"{i+1}. {movie}")
-    text.setSize(16)
-    text.draw(win)
-    # store both objects in a list
-    movie_objects.append((rect, text))
-
-# wait for user input
+# Wait for the user to click the window
 win.getMouse()
 
-# close the window
+# Close the window
 win.close()
