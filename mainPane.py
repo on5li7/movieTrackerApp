@@ -6,45 +6,56 @@ from movie import Movie
 global movies_list
 movies_list = []
 
+
+RECTANGLE_WIDTH = 150
+RECTANGLE_HEIGHT = 200
+MARGIN_X = 50
+MARGIN_Y = 50
+SPACING_X = 50
+SPACING_Y = 50
+
+
+
 def run_app():
     # create a window
-    win = GraphWin("Movie List", 900, 600)
+    win = GraphWin("Movie List", 1050, 600)
 
     # create a list of movies
     global movies_list
 
     movie_objects = []
+    rectangles = []
     for i, movie in enumerate(movies_list):
-        # create rectangle
-        rect = Rectangle(Point(50, 30 + i*60), Point(350, 80 + i*60))
-        rect.setOutline("black")
+        x = MARGIN_X + (i % 5) * (RECTANGLE_WIDTH + SPACING_X)
+        y = MARGIN_Y + (i // 5) * (RECTANGLE_HEIGHT + SPACING_Y)
+        rect = Rectangle(Point(x, y), Point(x + RECTANGLE_WIDTH, y + RECTANGLE_HEIGHT))
+        rect.setFill(color_rgb(200, 200, 200))
         rect.draw(win)
-
-                # create star polygon
+        rectangles.append(rect)
+        # create movie title
+        title = Text(Point(x + RECTANGLE_WIDTH / 2, y + 15), f"{i+1}. {movie.get_title()}")
+        title.setSize(12)
+        title.draw(win)
+        # create star polygon
         rating = int(movie.get_rating())
         for j in range(rating):
             star = Polygon(
-                Point(360 + j*70, 40 + i*60),
-                Point(370 + j*70, 60 + i*60),
-                Point(390 + j*70, 60 + i*60),
-                Point(375 + j*70, 70 + i*60),
-                Point(385 + j*70, 90 + i*60),
-                Point(360 + j*70, 80 + i*60),
-                Point(335 + j*70, 90 + i*60),
-                Point(345 + j*70, 70 + i*60),
-                Point(330 + j*70, 60 + i*60),
-                Point(350 + j*70, 60 + i*60)
+                Point(x + 25 + j*25, y + 170), #top 40
+                Point(x + 28 + j*25, y + 177),
+                Point(x + 35 + j*25, y + 177), #right
+                Point(x + 30 + j*25, y + 182),
+                Point(x + 31 + j*25, y + 190), #bot right
+                Point(x + 25 + j*25, y + 185),
+                Point(x + 19 + j*25, y + 190), #bot left
+                Point(x + 20 + j*25, y + 182),
+                Point(x + 15 + j*25, y + 177), #left
+                Point(x + 22 + j*25, y + 177)
             )
             star.setFill("yellow")
             star.draw(win)
 
-
-        # create text object
-        text = Text(Point(200, 55 + i*60), f"{i+1}. {movie.get_title()}")
-        text.setSize(16)
-        text.draw(win)
         # store both objects in a list
-        movie_objects.append((rect, star, text))
+        movie_objects.append((rect, star, Text))
 
     # wait for user input
     win.getMouse()

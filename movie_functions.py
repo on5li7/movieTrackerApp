@@ -1,4 +1,4 @@
-class Movie:
+class movie_functions:
     def __init__(self, title, rating, genre):
         self.title = title  # store the title of the movie
         self.rating = rating  # store the rating of the movie
