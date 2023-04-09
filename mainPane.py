@@ -36,6 +36,9 @@ def run_app():
         title = Text(Point(x + RECTANGLE_WIDTH / 2, y + 15), f"{i+1}. {movie.get_title()}")
         title.setSize(12)
         title.draw(win)
+
+        img = Image(Point(250, 250), "Movie_Images/spider-man.png")
+        img.draw(win)
         # create star polygon
         rating = int(movie.get_rating())
         for j in range(rating):
