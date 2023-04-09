@@ -33,24 +33,23 @@ def run_app():
         rect.draw(win)
         rectangles.append(rect)
         # create movie title
-        title = Text(Point(x + RECTANGLE_WIDTH / 2, y + RECTANGLE_HEIGHT / 2), f"{i+1}. {movie.get_title()}")
-        title.setSize(16)
+        title = Text(Point(x + RECTANGLE_WIDTH / 2, y + 15), f"{i+1}. {movie.get_title()}")
+        title.setSize(12)
         title.draw(win)
-
-                # create star polygon
+        # create star polygon
         rating = int(movie.get_rating())
         for j in range(rating):
             star = Polygon(
-                Point(360 + j*70, 40 + i*60),
-                Point(370 + j*70, 60 + i*60),
-                Point(390 + j*70, 60 + i*60),
-                Point(375 + j*70, 70 + i*60),
-                Point(385 + j*70, 90 + i*60),
-                Point(360 + j*70, 80 + i*60),
-                Point(335 + j*70, 90 + i*60),
-                Point(345 + j*70, 70 + i*60),
-                Point(330 + j*70, 60 + i*60),
-                Point(350 + j*70, 60 + i*60)
+                Point(x + 25 + j*25, y + 170), #top 40
+                Point(x + 28 + j*25, y + 177),
+                Point(x + 35 + j*25, y + 177), #right
+                Point(x + 30 + j*25, y + 182),
+                Point(x + 31 + j*25, y + 190), #bot right
+                Point(x + 25 + j*25, y + 185),
+                Point(x + 19 + j*25, y + 190), #bot left
+                Point(x + 20 + j*25, y + 182),
+                Point(x + 15 + j*25, y + 177), #left
+                Point(x + 22 + j*25, y + 177)
             )
             star.setFill("yellow")
             star.draw(win)
