@@ -6,19 +6,36 @@ from movie import Movie
 global movies_list
 movies_list = []
 
+
+RECTANGLE_WIDTH = 150
+RECTANGLE_HEIGHT = 200
+MARGIN_X = 50
+MARGIN_Y = 50
+SPACING_X = 50
+SPACING_Y = 50
+
+
+
 def run_app():
     # create a window
-    win = GraphWin("Movie List", 900, 600)
+    win = GraphWin("Movie List", 1050, 600)
 
     # create a list of movies
     global movies_list
 
     movie_objects = []
+    rectangles = []
     for i, movie in enumerate(movies_list):
-        # create rectangle
-        rect = Rectangle(Point(50, 30 + i*60), Point(350, 80 + i*60))
-        rect.setOutline("black")
+        x = MARGIN_X + (i % 5) * (RECTANGLE_WIDTH + SPACING_X)
+        y = MARGIN_Y + (i // 5) * (RECTANGLE_HEIGHT + SPACING_Y)
+        rect = Rectangle(Point(x, y), Point(x + RECTANGLE_WIDTH, y + RECTANGLE_HEIGHT))
+        rect.setFill(color_rgb(200, 200, 200))
         rect.draw(win)
+        rectangles.append(rect)
+        # create movie title
+        title = Text(Point(x + RECTANGLE_WIDTH / 2, y + RECTANGLE_HEIGHT / 2), f"{i+1}. {movie.get_title()}")
+        title.setSize(16)
+        title.draw(win)
 
                 # create star polygon
         rating = int(movie.get_rating())
@@ -38,13 +55,8 @@ def run_app():
             star.setFill("yellow")
             star.draw(win)
 
-
-        # create text object
-        text = Text(Point(200, 55 + i*60), f"{i+1}. {movie.get_title()}")
-        text.setSize(16)
-        text.draw(win)
         # store both objects in a list
-        movie_objects.append((rect, star, text))
+        movie_objects.append((rect, star, Text))
 
     # wait for user input
     win.getMouse()
