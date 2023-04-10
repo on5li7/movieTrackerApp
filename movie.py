@@ -51,6 +51,7 @@ class Movie:
             int: The rating of the movie.
         """
         return self.rating
+    
     def set_comment(self, comment):
         """
         Sets the comment of the movie.
@@ -59,6 +60,7 @@ class Movie:
             comment (str): The comment of the movie.
         """
         self.comment = comment 
+
     def get_comment(self):
         """
         Gets the comment of the movie.
@@ -67,6 +69,7 @@ class Movie:
             str: The comment of the movie.
         """
         return self.comment
+    
     def set_image_path(self, image_path):
         """
         Sets the image path of the movie
@@ -75,6 +78,7 @@ class Movie:
             image path(img): The image path of the movie.
         """
         self.image_path = image_path
+        
     def get_image_path(self):
         """"
         Gets the image path of the movie.
