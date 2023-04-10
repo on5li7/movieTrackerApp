@@ -28,17 +28,20 @@ def run_app():
     for i, movie in enumerate(movies_list):
         x = MARGIN_X + (i % 5) * (RECTANGLE_WIDTH + SPACING_X)
         y = MARGIN_Y + (i // 5) * (RECTANGLE_HEIGHT + SPACING_Y)
+
+        img = Image(Point(x + RECTANGLE_WIDTH/2, y + RECTANGLE_HEIGHT/2), "Movie_Images/Spider Man_resized.png")
+        img.draw(win)
+
         rect = Rectangle(Point(x, y), Point(x + RECTANGLE_WIDTH, y + RECTANGLE_HEIGHT))
-        rect.setFill(color_rgb(200, 200, 200))
+        #rect.setFill(color_rgb(200, 200, 200))
         rect.draw(win)
         rectangles.append(rect)
         # create movie title
         title = Text(Point(x + RECTANGLE_WIDTH / 2, y + 15), f"{i+1}. {movie.get_title()}")
         title.setSize(12)
+        title.setTextColor("white")
         title.draw(win)
 
-        img = Image(Point(x + RECTANGLE_WIDTH/2, y + RECTANGLE_HEIGHT/2), "Movie_Images/Spider Man_resized.png")
-        img.draw(win)
         # create star polygon
         rating = int(movie.get_rating())
         for j in range(rating):
