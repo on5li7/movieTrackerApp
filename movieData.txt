@@ -1,2 +1,2 @@
-The Last Jedi,5,good movie,Movie_Images/The_Last_Jedi_resized.png
-Spider-Man,2,did not like it,Movie_Images/Spider Man_resized.png
+the last Jedi,5,asdda,Movie_Images/The_Last_Jedi_resized.png
+spider man,3,sdfsdfsf,Movie_Images/Spider_Man_resized.png
