@@ -1,12 +1,13 @@
 from graphics import *
 from movie_list import MovieList
 from movie import Movie
-import tkinter as tk
+import time
 
 # public movie list
 global movies_list
 movies_list = []
-
+global movie_coords
+movie_coords = []
 
 RECTANGLE_WIDTH = 150
 RECTANGLE_HEIGHT = 200
@@ -29,6 +30,7 @@ def run_app():
     add_movie_button_text.draw(win)
     # create a list of movies
     global movies_list
+    global movie_coords
 
     movie_objects = []
     rectangles = []
@@ -40,6 +42,7 @@ def run_app():
         img.draw(win)
 
         rect = Rectangle(Point(x, y), Point(x + RECTANGLE_WIDTH, y + RECTANGLE_HEIGHT))
+        movie_coords.append([x, x + RECTANGLE_WIDTH, y, y + RECTANGLE_HEIGHT])
         #rect.setFill(color_rgb(200, 200, 200))
         rect.draw(win)
         rectangles.append(rect)
@@ -70,6 +73,7 @@ def run_app():
         # store both objects in a list
         movie_objects.append((rect, star, Text))
 
+    print("Coordinates of the movie rectangles", movie_coords)
     # wait for user input
     win.getMouse()
 
@@ -79,10 +83,14 @@ def run_app():
             win.delete("all")
             win.close()
             create_input_page()
+        for i in range(len(movie_coords)):
+            if click.getX() >= movie_coords[i][0] and click.getX() <= movie_coords[i][1] and click.getY() >= movie_coords[i][2] and click.getY() <= movie_coords[i][3]:
+                show_comments(i)  # Close the window
+
             
 
-        elif click == None:
-            break
+        # elif click == None:
+        #     break
 
         
     # close the window
@@ -171,11 +179,19 @@ def create_input_page():
 
     win2.close()
 
+def show_comments(i):
+    win_comment = GraphWin("Comment Window", 1000, 200)
+    comment = Text(Point(700, 50), movies_list[i].get_comment())
+    comment.draw(win_comment)
+    time.sleep(2)
+
+    win_comment.close()
 
 
 def main():
     create_movie_list()
     run_app()
+    
     
 
 
