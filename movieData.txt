@@ -1,8 +1,2 @@
-Madagascar,5
-The Godfather,4
-The Dark Knight,3
-Spider-Man,2
-12 Angry Men,1
-12 Angry Men,1
-12 Angry Men,1
-IDK,5
+The Last Jedi,5,good movie,Movie_Images/The_Last_Jedi_resized.png
+Spider-Man,2,did not like it,Movie_Images/Spider Man_resized.png

@@ -29,7 +29,7 @@ def run_app():
         x = MARGIN_X + (i % 5) * (RECTANGLE_WIDTH + SPACING_X)
         y = MARGIN_Y + (i // 5) * (RECTANGLE_HEIGHT + SPACING_Y)
 
-        img = Image(Point(x + RECTANGLE_WIDTH/2, y + RECTANGLE_HEIGHT/2), "Movie_Images/Spider Man_resized.png")
+        img = Image(Point(x + RECTANGLE_WIDTH/2, y + RECTANGLE_HEIGHT/2), movie.get_image_path())
         img.draw(win)
 
         rect = Rectangle(Point(x, y), Point(x + RECTANGLE_WIDTH, y + RECTANGLE_HEIGHT))
@@ -79,7 +79,8 @@ def create_movie_list():
 
     for line in lines:
         data = line.split(",")
-        movie = Movie(data[0], data[1])
+        print(data)
+        movie = Movie(data[0], data[1], data[2],  data[3])
         movies_list.append(movie)
         # movie_data_list.append(data)
 
