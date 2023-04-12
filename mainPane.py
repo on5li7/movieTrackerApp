@@ -167,6 +167,7 @@ def create_input_page():
             file.close()
             global movies_list
             movies_list.clear()
+            movie_coords.clear()
             create_movie_list()
             win2.close()
             run_app()

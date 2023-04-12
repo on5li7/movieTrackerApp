@@ -1,3 +1,5 @@
 the last Jedi,5,I liked it,Movie_Images/The_Last_Jedi_resized.png
-spider man,3,not like spider-man,Movie_Images/Spider_Man_resized.png
-spider man,4,love this spider-man. It was so funny. I enjoyed it. The spider-man guy  was handsome,Movie_Images/Spider_Man_resized.png
+spider  man,4,i liked it,Movie_Images/Spider_Man_resized.png
+idk,5,hate it,Movie_Images/The_Last_Jedi_resized.png
+xczx,1,xcvvxvx,Movie_Images/The_Last_Jedi_resized.png
+qqqqq,5,qqqqqqq,Movie_Images/Spider_Man_resized.png
