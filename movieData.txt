@@ -3,3 +3,6 @@ spider  man,4,i liked it,Movie_Images/Spider_Man_resized.png
 idk,5,hate it,Movie_Images/The_Last_Jedi_resized.png
 xczx,1,xcvvxvx,Movie_Images/The_Last_Jedi_resized.png
 qqqqq,5,qqqqqqq,Movie_Images/Spider_Man_resized.png
+ddddddd,5,ddddddd,Movie_Images/Spider_Man_resized.png
+vvvvvvvvvv,3,vvvvvvv,Movie_Images/Spider_Man_resized.png
+asdadasd,4,asdasdasd,Movie_Images/Spider_Man_resized.png

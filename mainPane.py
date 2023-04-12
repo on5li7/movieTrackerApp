@@ -165,12 +165,8 @@ def create_input_page():
             with open('movieData.txt', 'a') as file:
                 file.write(saved_text)
             file.close()
-            global movies_list
-            movies_list.clear()
-            movie_coords.clear()
-            create_movie_list()
             win2.close()
-            run_app()
+            refresh_main_page()
             
             # win2.close()
         # check if window was closed
@@ -179,6 +175,14 @@ def create_input_page():
 
 
     win2.close()
+
+#rerun the main page and update global variables
+def refresh_main_page():
+    global movies_list
+    movies_list.clear()
+    movie_coords.clear()
+    create_movie_list()
+    run_app()
 
 def show_comments(i):
     win_comment = GraphWin("Comment Window", 1000, 200)
