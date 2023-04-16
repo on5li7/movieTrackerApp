@@ -1,5 +1,5 @@
 from graphics import *
-from movie_list import MovieList
+# from movie_list import MovieList
 from movie import Movie
 import time
 
