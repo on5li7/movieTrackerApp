@@ -1,5 +1,6 @@
 import unittest
 from mainPane import *
+from graphics import *
 
 class TestMovieList(unittest.TestCase):
 
@@ -10,6 +11,9 @@ class TestMovieList(unittest.TestCase):
         self.assertEqual(movies_list[0].get_rating(), "4")
         self.assertEqual(movies_list[0].get_comment(), "I liked it")
         self.assertEqual(movies_list[0].get_image_path(), "Movie_Images/The_Last_Jedi_resized.png")
+
+    def test_show_comments(self):
+        show_comments(0)
 
 if __name__ == '__main__':
     unittest.main()
