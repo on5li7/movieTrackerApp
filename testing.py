@@ -2,7 +2,7 @@ import unittest
 from mainPane import *
 from graphics import GraphWin
 from fake_create_input import f
-
+from graphics import *
 
 class TestMovieList(unittest.TestCase):
 
@@ -15,7 +15,7 @@ class TestMovieList(unittest.TestCase):
     #     self.assertEqual(movies_list[0].get_image_path(), "Movie_Images/The_Last_Jedi_resized.png")
 
 
-     def test_create_input_page(self):
+    def test_create_input_page(self):
         win = f()
         # call the function
 
@@ -43,6 +43,9 @@ class TestMovieList(unittest.TestCase):
 
         # close the window
         win.close()
+
+    def test_show_comments(self):
+        show_comments(0)
 
 if __name__ == '__main__':
     unittest.main()

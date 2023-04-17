@@ -188,7 +188,7 @@ def show_comments(i):
     win_comment = GraphWin("Comment Window", 1000, 200)
     comment = Text(Point(700, 50), movies_list[i].get_comment())
     comment.draw(win_comment)
-    time.sleep(2)
+    time.sleep(5)
 
     win_comment.close()
 
