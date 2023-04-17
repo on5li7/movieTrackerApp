@@ -1,5 +1,6 @@
 import unittest
 from mainPane import *
+from movie import Movie
 from graphics import GraphWin
 from fake_create_input import f
 from graphics import *
@@ -25,6 +26,11 @@ class TestMovieList(unittest.TestCase):
         self.assertEqual(data[2], "Test comment")
         self.assertEqual(data[3], "/test/path")
 
+
+class TestMovieInput(unittest.TestCase):
+    def test_saved_moive_rating(self):
+        create_movie_list()
+        self.assertTrue(1 <= int(movies_list[0].get_rating()) <= 5)
 
 if __name__ == '__main__':
     unittest.main()
