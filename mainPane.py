@@ -166,7 +166,7 @@ def create_input_page():
                 file.write(saved_text)
             file.close()
             win2.close()
-            refresh_main_page()
+            # refresh_main_page()
             
             # win2.close()
         # check if window was closed
