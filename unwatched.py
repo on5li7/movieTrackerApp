@@ -210,15 +210,28 @@ def refresh_main_page():
     create_movie_list()
     run_app()
 
+# def show_comments(i):
+#     win_comment = GraphWin("Comment Window", 1000, 200)
+#     comment = Text(Point(700, 50), movies_list[i].get_comment())
+#     comment.draw(win_comment)
+#     time.sleep(2)
+
+#     win_comment.close()
+
 def show_comments(i):
-    win_comment = GraphWin("Comment Window", 1000, 200)
-    comment = Text(Point(700, 50), movies_list[i].get_comment())
+    win_comment = GraphWin("Comment Window", 500, 200)
+    comment = Text(Point(250, 100), movies_list[i].get_comment()) # Centered text
+    comment.setSize(18) # Increase font size for readability
+    comment.setStyle("bold") # Make the text bold
     comment.draw(win_comment)
-    time.sleep(2)
 
+    # Center the text horizontally
+    # text_width = comment.
+    # comment.move(-text_width / 2, 0)
+
+    win_comment.getMouse() # Wait for a mouse click before closing the window
     win_comment.close()
-
-
+    
 def main():
     create_movie_list()
     run_app()
