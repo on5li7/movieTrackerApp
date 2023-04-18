@@ -15,7 +15,7 @@ RECTANGLE_HEIGHT = 200
 MARGIN_X = 50
 MARGIN_Y = 50
 SPACING_X = 50
-SPACING_Y = 50
+SPACING_Y = 70
 
 
 
@@ -23,6 +23,7 @@ def run_app():
     # create a window
     # root1 = tk.Tk()
     win = GraphWin("WATCHED Movie List", 1050, 600, autoflush=False)
+    win.setBackground("dark grey")
 
      #create add movie button
     add_movie_button = Rectangle(Point(900, 10), Point(1000, 35))
@@ -55,7 +56,7 @@ def run_app():
         rect.draw(win)
         rectangles.append(rect)
         # create movie title
-        title = Text(Point(x + RECTANGLE_WIDTH / 2, y + 15), f"{i+1}. {movie.get_title()}")
+        title = Text(Point(x + RECTANGLE_WIDTH / 2, y + RECTANGLE_HEIGHT + 15), f"{i+1}. {movie.get_title()}")
         title.setSize(12)
         title.setTextColor("white")
         title.draw(win)
