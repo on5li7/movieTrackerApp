@@ -96,7 +96,11 @@ def run_app():
                 show_comments(i)  # Close the window
         if (click.getX() >= 750 and click.getX() <= 850 and click.getY() >= 10 and click.getY() <= 35):
             win.close()
+            movie_coords.clear()
+            movies_list.clear()
             menu_page.main()
+            
+            
 
             
 
