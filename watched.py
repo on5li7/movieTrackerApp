@@ -2,6 +2,7 @@ from graphics import *
 # from movie_list import MovieList
 from movie import Movie
 import time
+import menu_page
 
 # public movie list
 global movies_list
@@ -28,6 +29,13 @@ def run_app():
     add_movie_button_text = Text(Point(950, 22), "Add Movie")
     add_movie_button.draw(win)
     add_movie_button_text.draw(win)
+
+    #create a back to menu button
+    back_to_menu_button = Rectangle(Point(750, 10), Point(850, 35))
+    back_to_menu_button_text = Text(Point(800, 22), "Menu")
+    back_to_menu_button.draw(win)
+    back_to_menu_button_text.draw(win)
+
     # create a list of movies
     global movies_list
     global movie_coords
@@ -86,6 +94,9 @@ def run_app():
         for i in range(len(movie_coords)):
             if click.getX() >= movie_coords[i][0] and click.getX() <= movie_coords[i][1] and click.getY() >= movie_coords[i][2] and click.getY() <= movie_coords[i][3]:
                 show_comments(i)  # Close the window
+        if (click.getX() >= 750 and click.getX() <= 850 and click.getY() >= 10 and click.getY() <= 35):
+            win.close()
+            menu_page.main()
 
             
 
