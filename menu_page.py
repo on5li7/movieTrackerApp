@@ -1,11 +1,13 @@
 from graphics import *
 import watched
 import unwatched
+import currently_watching
 
 def main():
     # Create a graphics window
     win = GraphWin("Menu Page", 400, 450)
 
+    
     # Set a background color
     win.setBackground("white")
 
@@ -44,6 +46,13 @@ def main():
             # Button 2 is clicked
             win.close()
             unwatched.main()
+        
+        elif button3.getP1().getX() <= click_point.getX() <= button3.getP2().getX() and \
+                button3.getP1().getY() <= click_point.getY() <= button3.getP2().getY():
+            # Button 2 is clicked
+            win.close()
+            currently_watching.main()
+        
 
         else:
             # No button is clicked
