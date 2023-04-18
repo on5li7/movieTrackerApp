@@ -151,6 +151,12 @@ def create_input_page():
     save_button.draw(win2)
     save_button_text.draw(win2)
 
+    #create a back button 
+    back_button = Rectangle(Point(350, 400), Point(450, 425))
+    back_button_text = Text(Point(400, 410), "Back")
+    back_button.draw(win2)
+    back_button_text.draw(win2)
+
     # main loop to wait for user input and handle button clicks
     while True:
         click = win2.getMouse()
@@ -167,6 +173,11 @@ def create_input_page():
             file.close()
             win2.close()
             # refresh_main_page()
+
+        if (click.getX() >= 350 and click.getX() <= 450 
+            and click.getY() >= 400 and click.getY() <= 425):
+            win2.close()
+            refresh_main_page()
             
             # win2.close()
         # check if window was closed
