@@ -1,5 +1,5 @@
 import unittest
-from mainPane import *
+from watched import *
 from movie import Movie
 from graphics import GraphWin
 from fake_create_input import f
