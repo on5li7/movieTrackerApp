@@ -21,7 +21,7 @@ SPACING_Y = 50
 def run_app():
     # create a window
     # root1 = tk.Tk()
-    win = GraphWin("WATHED Movie List", 1050, 600, autoflush=False)
+    win = GraphWin("WATCHED Movie List", 1050, 600, autoflush=False)
 
      #create add movie button
     add_movie_button = Rectangle(Point(900, 10), Point(1000, 35))
@@ -162,7 +162,7 @@ def create_input_page():
             # save input to Text widget
             saved_text = title_input.getText() + ',' + star_input.getText() + ',' + comment_input.getText() +',' + path_input.getText()+'\n'
             print(saved_text)
-            with open('wAtchedMovieData.txt', 'a') as file:
+            with open('watchedMovieData.txt', 'a') as file:
                 file.write(saved_text)
             file.close()
             win2.close()
@@ -188,7 +188,7 @@ def show_comments(i):
     win_comment = GraphWin("Comment Window", 1000, 200)
     comment = Text(Point(700, 50), movies_list[i].get_comment())
     comment.draw(win_comment)
-    time.sleep(5)
+    time.sleep(2)
 
     win_comment.close()
 
