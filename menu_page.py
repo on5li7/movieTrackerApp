@@ -4,7 +4,7 @@ import unwatched
 
 def main():
     # Create a graphics window
-    win = GraphWin("Menu Page", 400, 400)
+    win = GraphWin("Menu Page", 400, 450)
 
     # Set a background color
     win.setBackground("white")
@@ -21,6 +21,12 @@ def main():
     button2.draw(win)
     button2_label = Text(Point(200, 225), "Unwatched List")
     button2_label.draw(win)
+
+    button3 = Rectangle(Point(100, 300), Point(300, 350))
+    button3.setFill("lightgray")
+    button3.draw(win)
+    button3_label = Text(Point(200, 325), "Currently Watching List")
+    button3_label.draw(win)
 
     # Wait for a button to be clicked
     while True:
