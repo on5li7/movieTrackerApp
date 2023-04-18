@@ -35,12 +35,14 @@ def main():
         if button1.getP1().getX() <= click_point.getX() <= button1.getP2().getX() and \
                 button1.getP1().getY() <= click_point.getY() <= button1.getP2().getY():
             # Button 1 is clicked
+            win.close()
             watched.main()
             
 
         elif button2.getP1().getX() <= click_point.getX() <= button2.getP2().getX() and \
                 button2.getP1().getY() <= click_point.getY() <= button2.getP2().getY():
             # Button 2 is clicked
+            win.close()
             unwatched.main()
 
         else:
