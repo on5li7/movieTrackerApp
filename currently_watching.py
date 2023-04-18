@@ -18,7 +18,6 @@ SPACING_X = 50
 SPACING_Y = 70
 
 
-
 def run_app():
     # create a window
     # root1 = tk.Tk()
@@ -100,9 +99,6 @@ def run_app():
             movie_coords.clear()
             movies_list.clear()
             menu_page.main()
-            
-            
-
             
 
         # elif click == None:
@@ -225,7 +221,6 @@ def main():
     run_app()
     
     
-
 
 
 if __name__ == '__main__':
