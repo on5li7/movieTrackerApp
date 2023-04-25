@@ -9,7 +9,10 @@ def main():
 
     
     # Set a background color
-    win.setBackground("white")
+    win.setBackground("#c6e2e9")
+
+    menu_label = Text(Point(200, 25), "My Movies and Shows")
+    menu_label.draw(win)
 
     # Create buttons
     button1 = Rectangle(Point(100, 100), Point(300, 150))
