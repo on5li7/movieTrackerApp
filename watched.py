@@ -23,7 +23,7 @@ def run_app():
     # create a window
     # root1 = tk.Tk()
     win = GraphWin("WATCHED Movie List", 1050, 600, autoflush=False)
-    win.setBackground("dark grey")
+    win.setBackground("#c6e2e9")
 
      #create add movie button
     add_movie_button = Rectangle(Point(900, 10), Point(1000, 35))
@@ -58,7 +58,7 @@ def run_app():
         # create movie title
         title = Text(Point(x + RECTANGLE_WIDTH / 2, y + RECTANGLE_HEIGHT + 15), f"{i+1}. {movie.get_title()}")
         title.setSize(12)
-        title.setTextColor("white")
+        title.setTextColor("black")
         title.draw(win)
        
         # create star polygon
