@@ -9,6 +9,8 @@ global movies_list
 movies_list = []
 global movie_coords
 movie_coords = []
+global button_coords
+button_coords = []
 
 RECTANGLE_WIDTH = 150
 RECTANGLE_HEIGHT = 200
@@ -60,6 +62,11 @@ def run_app():
         title.setSize(12)
         title.setTextColor("white")
         title.draw(win)
+
+        watched_button = Rectangle(Point(x+25, y-15),  Point(x, y))
+        button_coords.append([x, x+25, y, y-15])
+        watched_button.setFill('green')
+        watched_button.draw(win)
        
         # create star polygon
         #rating = int(movie.get_rating())
@@ -96,6 +103,10 @@ def run_app():
         for i in range(len(movie_coords)):
             if click.getX() >= movie_coords[i][0] and click.getX() <= movie_coords[i][1] and click.getY() >= movie_coords[i][2] and click.getY() <= movie_coords[i][3]:
                 show_comments(i)  # Close the window
+
+        # for i in range(len(button_coords)):
+        #     if click.getX() >= button_coords[i][0] and click.getX() <= button_coords[i][1] and click.getY() <= button_coords[i][2] and click.getY() >= button_coords[i][3]:
+
         if (click.getX() >= 750 and click.getX() <= 850 and click.getY() >= 10 and click.getY() <= 35):
             win.close()
             movie_coords.clear()
