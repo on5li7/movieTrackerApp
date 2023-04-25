@@ -18,12 +18,11 @@ SPACING_X = 50
 SPACING_Y = 70
 
 
-
 def run_app():
     # create a window
     # root1 = tk.Tk()
-    win = GraphWin("WATCHED Movie List", 1050, 600, autoflush=False)
-    win.setBackground("#c6e2e9")
+    win = GraphWin("Currently Watching Movie List", 1050, 600, autoflush=False)
+    win.setBackground("dark grey")
 
      #create add movie button
     add_movie_button = Rectangle(Point(900, 10), Point(1000, 35))
@@ -58,7 +57,7 @@ def run_app():
         # create movie title
         title = Text(Point(x + RECTANGLE_WIDTH / 2, y + RECTANGLE_HEIGHT + 15), f"{i+1}. {movie.get_title()}")
         title.setSize(12)
-        title.setTextColor("black")
+        title.setTextColor("white")
         title.draw(win)
        
         # create star polygon
@@ -101,9 +100,6 @@ def run_app():
             movies_list.clear()
             menu_page.main()
             
-            
-
-            
 
         # elif click == None:
         #     break
@@ -118,7 +114,7 @@ def create_movie_list():
     global movies_list
     # movie_data_list = [] # getting all movie data
 
-    with open('watchedMovieData.txt', 'r+') as file:
+    with open('currentlyWatchingMovieData.txt', 'r+') as file:
         lines = [line.strip() for line in file.readlines()]
 
     for line in lines:
@@ -184,7 +180,7 @@ def create_input_page():
             # save input to Text widget
             saved_text = title_input.getText() + ',' + star_input.getText() + ',' + comment_input.getText() +',' + path_input.getText()+'\n'
             print(saved_text)
-            with open('watchedMovieData.txt', 'a') as file:
+            with open('currentlyWatchingMovieData.txt', 'a') as file:
                 file.write(saved_text)
             file.close()
             win2.close()
@@ -212,9 +208,8 @@ def refresh_main_page():
     run_app()
 
 # def show_comments(i):
-#     win_comment = GraphWin("Comment Window", 500, 200)
-#     comment = Text(Point(40, 10), movies_list[i].get_comment())
-#     comment.setJustification("center")
+#     win_comment = GraphWin("Comment Window", 1000, 200)
+#     comment = Text(Point(700, 50), movies_list[i].get_comment())
 #     comment.draw(win_comment)
 #     time.sleep(2)
 
@@ -234,13 +229,11 @@ def show_comments(i):
     win_comment.getMouse() # Wait for a mouse click before closing the window
     win_comment.close()
 
-
 def main():
     create_movie_list()
     run_app()
     
     
-
 
 
 if __name__ == '__main__':
