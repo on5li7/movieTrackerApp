@@ -26,6 +26,9 @@ def run_app():
     win = GraphWin("Currently Watching Movie List", 1050, 600, autoflush=False)
     win.setBackground("#c6e2e9")
 
+    win_label = Text(Point(100,10), "Currently Watching")
+    win_label.draw(win)
+
      #create add movie button
     add_movie_button = Rectangle(Point(900, 10), Point(1000, 35))
     add_movie_button.setFill("light gray")
