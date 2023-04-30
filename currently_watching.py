@@ -3,6 +3,8 @@ from graphics import *
 from movie import Movie
 import time
 import menu_page
+import watched
+import unwatched
 
 # public movie list
 global movies_list
@@ -32,11 +34,25 @@ def run_app():
     add_movie_button_text.draw(win)
 
     #create a back to menu button
-    back_to_menu_button = Rectangle(Point(750, 10), Point(850, 35))
-    back_to_menu_button.setFill("light gray")
-    back_to_menu_button_text = Text(Point(800, 22), "Menu")
-    back_to_menu_button.draw(win)
-    back_to_menu_button_text.draw(win)
+    #back_to_menu_button = Rectangle(Point(750, 10), Point(850, 35))
+    #back_to_menu_button.setFill("light gray")
+    #back_to_menu_button_text = Text(Point(800, 22), "Menu")
+    #back_to_menu_button.draw(win)
+    #back_to_menu_button_text.draw(win)
+
+    #create watched button
+    watched_button = Rectangle(Point(750, 10), Point(850, 35))
+    watched_button.setFill("light gray")
+    watched_button_text = Text(Point(800, 22), "Watched")
+    watched_button.draw(win)
+    watched_button_text.draw(win)
+
+    #create unwatched button
+    unwatched_button = Rectangle(Point(600, 10), Point(700, 35))
+    unwatched_button.setFill("light gray")
+    unwatched_button_text = Text(Point(650, 22), "Unwatched")
+    unwatched_button.draw(win)
+    unwatched_button_text.draw(win)
 
     # create a list of movies
     global movies_list
@@ -100,7 +116,12 @@ def run_app():
             win.close()
             movie_coords.clear()
             movies_list.clear()
-            menu_page.main()
+            watched.main()
+        if (click.getX() >= 600 and click.getX() <= 700 and click.getY() >= 10 and click.getY() <= 35):
+            win.close()
+            movie_coords.clear()
+            movies_list.clear()
+            unwatched.main()
             
 
         # elif click == None:
