@@ -18,19 +18,19 @@ def main():
     button1 = Rectangle(Point(100, 100), Point(300, 150))
     button1.setFill("lightgray")
     button1.draw(win)
-    button1_label = Text(Point(200, 125), "Watched List")
+    button1_label = Text(Point(200, 125), "Watched")
     button1_label.draw(win)
 
     button2 = Rectangle(Point(100, 200), Point(300, 250))
     button2.setFill("lightgray")
     button2.draw(win)
-    button2_label = Text(Point(200, 225), "Unwatched List")
+    button2_label = Text(Point(200, 225), "Plan to Watch")
     button2_label.draw(win)
 
     button3 = Rectangle(Point(100, 300), Point(300, 350))
     button3.setFill("lightgray")
     button3.draw(win)
-    button3_label = Text(Point(200, 325), "Currently Watching List")
+    button3_label = Text(Point(200, 325), "Currently Watching")
     button3_label.draw(win)
 
     # Wait for a button to be clicked
