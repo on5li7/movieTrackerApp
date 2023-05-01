@@ -125,8 +125,9 @@ def run_app():
             if click.getX() >= movie_coords[i][0] and click.getX() <= movie_coords[i][1] and click.getY() >= movie_coords[i][2] and click.getY() <= movie_coords[i][3]:
                 show_comments(i)  # Close the window
 
-        # for i in range(len(button_coords)):
-        #     if click.getX() >= button_coords[i][0] and click.getX() <= button_coords[i][1] and click.getY() <= button_coords[i][2] and click.getY() >= button_coords[i][3]:
+        for i in range(len(button_coords)):
+            if click.getX() >= button_coords[i][0] and click.getX() <= button_coords[i][1] and click.getY() <= button_coords[i][2] and click.getY() >= button_coords[i][3]:
+                win.close()
 
         if (click.getX() >= 750 and click.getX() <= 850 and click.getY() >= 10 and click.getY() <= 35):
             win.close()
