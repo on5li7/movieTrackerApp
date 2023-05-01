@@ -127,7 +127,15 @@ def run_app():
 
         for i in range(len(button_coords)):
             if click.getX() >= button_coords[i][0] and click.getX() <= button_coords[i][1] and click.getY() <= button_coords[i][2] and click.getY() >= button_coords[i][3]:
-                win.close()
+                line_to_delete = i
+                with open('notWatchedMovieData.txt', 'r') as file:
+                    lines = file.readlines()
+                file.close()
+                with open('notWatchedMovieData.txt', "w") as f:
+                    for i, line in enumerate(lines):
+                        if i != line_to_delete:
+                            f.write(line)
+
 
         if (click.getX() >= 750 and click.getX() <= 850 and click.getY() >= 10 and click.getY() <= 35):
             win.close()
