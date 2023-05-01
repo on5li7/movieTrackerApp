@@ -135,6 +135,9 @@ def run_app():
                     for i, line in enumerate(lines):
                         if i != line_to_delete:
                             f.write(line)
+                        else:
+                            with open('watchedMovieData.txt', "a") as watched_f:
+                                watched_f.write(line)
 
 
         if (click.getX() >= 750 and click.getX() <= 850 and click.getY() >= 10 and click.getY() <= 35):

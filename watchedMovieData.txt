@@ -1,3 +1,2 @@
 the last Jedi,5,I liked it,Movie_Images/The_Last_Jedi_resized.png
-Spiderman,2,fjoasjf,Movie_Images/Spider_Man_resized.png
-hi,3,jfioa,
+Spider-Man,4,I loved it,Movie_Images/Spider_Man_resized.png
