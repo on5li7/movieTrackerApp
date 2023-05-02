@@ -1,2 +1,0 @@
-s-man,4,like,Movie_Images/Spider_Man_resized.png
-s-man,4,like,Movie_Images/Spider_Man_resized.png

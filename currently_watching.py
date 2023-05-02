@@ -165,6 +165,8 @@ def create_movie_list():
 def create_input_page():
 
     win2 = GraphWin("User Inputs", 850, 600, autoflush=False)
+    
+    win2.setBackground("#c6e9d9")
 
     # create an Entry widget for user input
     title_input_text = Text(Point(200, 70), "Enter Movie Title")
@@ -198,12 +200,14 @@ def create_input_page():
     save_button = Rectangle(Point(350, 300), Point(450, 325))
     save_button_text = Text(Point(400, 310), "Save Input")
     save_button.draw(win2)
+    save_button.setFill("light gray")
     save_button_text.draw(win2)
 
     #create a back button 
     back_button = Rectangle(Point(350, 400), Point(450, 425))
     back_button_text = Text(Point(400, 410), "Back")
     back_button.draw(win2)
+    back_button.setFill("light gray")
     back_button_text.draw(win2)
 
     # main loop to wait for user input and handle button clicks
@@ -256,7 +260,7 @@ def show_comments(i):
     win_comment = GraphWin("Comment Window", 500, 200)
 
     win_comment.setBackground("#d8c6e9")
-    
+
     comment = Text(Point(250, 100), movies_list[i].get_comment())
     comment.setSize(18)
     comment.setStyle("bold")
