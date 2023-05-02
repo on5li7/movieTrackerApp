@@ -60,6 +60,13 @@ def run_app():
     current_button.draw(win)
     current_button_text.draw(win)
 
+    #create edit movie button
+    edit_button = Rectangle(Point(450, 10), Point(550, 35))
+    edit_button.setFill("light gray")
+    edit_button_text = Text(Point(500, 22), "Edit")
+    edit_button.draw(win)
+    edit_button_text.draw(win)
+
     # create a list of movies
     global movies_list
     global movie_coords
