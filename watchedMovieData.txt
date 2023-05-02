@@ -6,3 +6,4 @@ yyyyyyyyyy,4,yyyyyyyyyyy,Movie_Images/Spider_Man_resized.png
 iiiiiiiiiii,4,iiiiiiiiiiiii,Movie_Images/Spider_Man_resized.png
 s-man,4,like,Movie_Images/Spider_Man_resized.png
 s-man,4,like,Movie_Images/Spider_Man_resized.png
+Succession,1,I heard it's good. ,Movie_Images/Succession_resized.png

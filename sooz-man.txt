@@ -1,0 +1,4 @@
+Title: sooz-man
+Rating: 4
+Comment: I loved it
+Image: Movie_Images/Spider_Man_resized.png

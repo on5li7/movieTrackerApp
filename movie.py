@@ -33,6 +33,9 @@ class Movie:
             str: The title of the movie.
         """
         return self.title
+    
+    def set_title(self, title):
+        self.title = title
 
     def set_rating(self, rating):
         """
