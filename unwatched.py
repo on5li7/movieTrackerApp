@@ -286,6 +286,9 @@ def refresh_main_page():
 
 def show_comments(i):
     win_comment = GraphWin("Comment Window", 500, 200)
+
+    win_comment.setBackground("#d8c6e9")
+    
     comment = Text(Point(250, 100), movies_list[i].get_comment())
     comment.setSize(18)
     comment.setStyle("bold")
