@@ -144,6 +144,7 @@ def run_app():
                         else:
                             with open('watchedMovieData.txt', "a") as watched_f:
                                 watched_f.write(line)
+
         if (click.getX() >= 450 and click.getX() <= 550 and click.getY() >= 10 and click.getY() <= 35):
             win.delete("all")
             win.close()
@@ -266,6 +267,7 @@ def refresh_main_page():
     global movies_list
     movies_list.clear()
     movie_coords.clear()
+    button_coords.clear()
     create_movie_list()
     run_app()
 
