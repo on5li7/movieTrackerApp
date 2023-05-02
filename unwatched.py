@@ -144,8 +144,11 @@ def run_app():
                         else:
                             with open('watchedMovieData.txt', "a") as watched_f:
                                 watched_f.write(line)
+                win.close()
+                refresh_main_page()
                 f.close()
                 watched_f.close()
+
 
         if (click.getX() >= 450 and click.getX() <= 550 and click.getY() >= 10 and click.getY() <= 35):
             win.delete("all")
@@ -249,7 +252,7 @@ def create_input_page():
                 file.write(saved_text)
             file.close()
             win2.close()
-            # refresh_main_page()
+            refresh_main_page()
         
         if (click.getX() >= 350 and click.getX() <= 450 
             and click.getY() >= 400 and click.getY() <= 425):

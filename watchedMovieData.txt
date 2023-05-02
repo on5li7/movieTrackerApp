@@ -1,2 +1,6 @@
 the last Jedi,5,I liked it,Movie_Images/The_Last_Jedi_resized.png
 Spider-Man,4,I loved it,Movie_Images/Spider_Man_resized.png
+s-man,4,like,Movie_Images/Spider_Man_resized.png
+asdasda,5,dasdasda,Movie_Images/Spider_Man_resized.png
+yyyyyyyyyy,4,yyyyyyyyyyy,Movie_Images/Spider_Man_resized.png
+iiiiiiiiiii,4,iiiiiiiiiiiii,Movie_Images/Spider_Man_resized.png

@@ -221,7 +221,7 @@ def create_input_page():
                 file.write(saved_text)
             file.close()
             win2.close()
-            # refresh_main_page()
+            refresh_main_page()
 
         if (click.getX() >= 350 and click.getX() <= 450 
             and click.getY() >= 400 and click.getY() <= 425):

@@ -226,7 +226,7 @@ def create_input_page():
                 file.write(saved_text)
             file.close()
             win2.close()
-            # refresh_main_page()
+            refresh_main_page()
 
         if (click.getX() >= 350 and click.getX() <= 450 
             and click.getY() >= 400 and click.getY() <= 425):
@@ -339,7 +339,7 @@ def edit_movie_page():
                 file.write(saved_text)
             file.close()
             win2.close()
-            # refresh_main_page()
+            refresh_main_page()
 
         if (click.getX() >= 350 and click.getX() <= 450 
             and click.getY() >= 400 and click.getY() <= 425):
@@ -349,7 +349,7 @@ def edit_movie_page():
             # win2.close()
         # check if window was closed
         elif click == None:
-            break
+            continue
 
     win2.close()
 
