@@ -12,6 +12,9 @@ def main():
     win.setBackground("#c6e2e9")
 
     menu_label = Text(Point(200, 25), "My Movies and Shows")
+    menu_label.setStyle("bold")
+    menu_label.setFace("courier")
+    menu_label.setSize(18)
     menu_label.draw(win)
 
     # Create buttons
