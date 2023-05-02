@@ -253,7 +253,7 @@ def refresh_main_page():
 #     win_comment.close()
 
 def show_comments(i):
-    win_comment = GraphWin("Comment Window", 500, 400)
+    win_comment = GraphWin("Edit Window", 500, 400)
 
     # Add movie details
     movie_title_label = Text(Point(100, 50), "Movie Title:")
