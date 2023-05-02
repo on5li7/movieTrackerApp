@@ -273,7 +273,7 @@ def show_comments(i):
 
     movie_comment_label = Text(Point(100, 150), "Movie Comment:")
     movie_comment_label.draw(win_comment)
-    movie_comment_entry = Text(Point(300, 150), movies_list[i].get_comment())
+    movie_comment_entry = Entry(Point(300, 150), movies_list[i].get_comment())
     movie_comment_entry.draw(win_comment)
 
     movie_image_label = Text(Point(100, 200), "Movie Image Path:")
