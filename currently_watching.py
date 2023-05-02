@@ -57,6 +57,13 @@ def run_app():
     unwatched_button.draw(win)
     unwatched_button_text.draw(win)
 
+    #create edit movie button
+    edit_button = Rectangle(Point(450, 10), Point(550, 35))
+    edit_button.setFill("light gray")
+    edit_button_text = Text(Point(500, 22), "Edit")
+    edit_button.draw(win)
+    edit_button_text.draw(win)
+
     # create a list of movies
     global movies_list
     global movie_coords
@@ -125,7 +132,11 @@ def run_app():
             movie_coords.clear()
             movies_list.clear()
             unwatched.main()
-            
+        if (click.getX() >= 450 and click.getX() <= 550 and click.getY() >= 10 and click.getY() <= 35):
+            win.delete("all")
+            win.close()
+            edit_movie_page()
+
 
         # elif click == None:
         #     break
@@ -255,11 +266,85 @@ def show_comments(i):
     win_comment.getMouse() # Wait for a mouse click before closing the window
     win_comment.close()
 
+def edit_movie_page():
+
+    win2 = GraphWin("Edit Movie", 850, 600, autoflush=False)
+
+    # create an Entry widget for user input
+    title_input_text = Text(Point(200, 70), "Edit Movie Title")
+    title_input = Entry(Point(200, 100), 30)
+    title_input.setFill("white")
+    title_input.draw(win2)
+    title_input_text.draw(win2)
+
+    star_input_text = Text(Point(200, 170), "Edit Movie Star (1-5)")
+    star_input = Entry(Point(200, 200), 30)
+    star_input.setFill("white")
+    star_input.draw(win2)
+    star_input_text.draw(win2)
+
+    comment_input_text = Text(Point(600, 70), "Edit Your Comments")
+    comment_input = Entry(Point(600, 100), 30)
+    comment_input.setFill("white")
+    comment_input.draw(win2)
+    comment_input_text.draw(win2)
+
+    path_input_text = Text(Point(600, 170), "Edit Path to the Image")
+    path_input = Entry(Point(600, 200), 30)
+    path_input.setFill("white")
+    path_input.draw(win2)
+    path_input_text.draw(win2)
+
+    # create a Text variable to save inputs
+    saved_text = ''
+
+    # create a button to save input to Text widget
+    save_button = Rectangle(Point(325, 300), Point(475, 325))
+    save_button_text = Text(Point(400, 310), "Save Changes")
+    save_button.draw(win2)
+    save_button_text.draw(win2)
+
+    #create a back button 
+    back_button = Rectangle(Point(350, 400), Point(450, 425))
+    back_button_text = Text(Point(400, 410), "Back")
+    back_button.draw(win2)
+    back_button_text.draw(win2)
+
+    # main loop to wait for user input and handle button clicks
+    while True:
+        click = win2.getMouse()
+        
+        # check if save button was clicked
+        if (click.getX() >= 350 and click.getX() <= 450
+            and click.getY() >= 300 and click.getY() <= 325):
+            
+            # save input to Text widget
+            saved_text = title_input.getText() + ',' + star_input.getText() + ',' + comment_input.getText() +',' + path_input.getText()+'\n'
+            print(saved_text)
+            with open('watchedMovieData.txt', 'a') as file:
+                file.write(saved_text)
+            file.close()
+            win2.close()
+            # refresh_main_page()
+
+        if (click.getX() >= 350 and click.getX() <= 450 
+            and click.getY() >= 400 and click.getY() <= 425):
+            win2.close()
+            refresh_main_page()
+            
+            # win2.close()
+        # check if window was closed
+        elif click == None:
+            break
+
+    win2.close()
+
+
 def main():
     create_movie_list()
     run_app()
     
-    
+   
 
 
 if __name__ == '__main__':
