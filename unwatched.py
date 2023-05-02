@@ -281,17 +281,25 @@ def refresh_main_page():
 
 def show_comments(i):
     win_comment = GraphWin("Comment Window", 500, 200)
-    comment = Text(Point(250, 100), movies_list[i].get_comment()) # Centered text
-    comment.setSize(18) # Increase font size for readability
-    comment.setStyle("bold") # Make the text bold
+    comment = Text(Point(250, 100), movies_list[i].get_comment())
+    comment.setSize(18)
+    comment.setStyle("bold")
     comment.draw(win_comment)
 
-    # Center the text horizontally
-    # text_width = comment.
-    # comment.move(-text_width / 2, 0)
+    # Add a close button to the comment window
+    close_button = Rectangle(Point(480, 10), Point(500, 30))
+    close_button.setFill("red")
+    close_button.draw(win_comment)
+    close_label = Text(Point(490, 20), "X")
+    close_label.setStyle("bold")
+    close_label.draw(win_comment)
 
-    win_comment.getMouse() # Wait for a mouse click before closing the window
-    win_comment.close()
+    while True:
+        click = win_comment.getMouse()
+        if click.getX() >= 480 and click.getX() <= 500 and click.getY() >= 10 and click.getY() <= 30:
+            # Clicked the close button, so close the comment window and return to main window
+            win_comment.close()
+            return
 
 def edit_movie_page():
 
