@@ -7,3 +7,5 @@ iiiiiiiiiii,4,iiiiiiiiiiiii,Movie_Images/Spider_Man_resized.png
 s-man,4,like,Movie_Images/Spider_Man_resized.png
 s-man,4,like,Movie_Images/Spider_Man_resized.png
 Succession,1,I heard it's good. ,Movie_Images/Succession_resized.png
+the last Jedi,5,I liked it,Movie_Images/The_Last_Jedi_resized.png
+Spiderman,4,i like it,Movie_Images/Spider_Man_resized.png
