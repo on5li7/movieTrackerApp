@@ -13,3 +13,6 @@ Read the [TechDebt](TechDebt.md) file.
 # Instructions on Downloading the App
 
 # For More Info 
+
+[Customer Notes](customerNotes.md)
+[Traditional Report](traditionalReport.md) 
