@@ -138,7 +138,7 @@ def run_app():
                         if i != line_to_delete:
                             f.write(line)
                         else:
-                            with open('watchedMovieData.txt', "a") as watched_f:
+                            with open('currentlyWatchingMovieData.txt', "a") as watched_f:
                                 watched_f.write(line)
                 win.close()
                 refresh_main_page()

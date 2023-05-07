@@ -11,6 +11,8 @@ global movies_list
 movies_list = []
 global movie_coords
 movie_coords = []
+global button_coords
+button_coords = []
 
 RECTANGLE_WIDTH = 150
 RECTANGLE_HEIGHT = 200
@@ -83,6 +85,11 @@ def run_app():
         title.setSize(12)
         title.setTextColor("black")
         title.draw(win)
+
+        watched_button = Rectangle(Point(x+25, y-15),  Point(x, y))
+        button_coords.append([x, x+25, y, y-15])
+        watched_button.setFill('green')
+        watched_button.draw(win)
        
         # create star polygon
         rating = int(movie.get_rating())
@@ -118,6 +125,23 @@ def run_app():
         for i in range(len(movie_coords)):
             if click.getX() >= movie_coords[i][0] and click.getX() <= movie_coords[i][1] and click.getY() >= movie_coords[i][2] and click.getY() <= movie_coords[i][3]:
                 show_comments(i)  # Close the window
+        for i in range(len(button_coords)):
+            if click.getX() >= button_coords[i][0] and click.getX() <= button_coords[i][1] and click.getY() <= button_coords[i][2] and click.getY() >= button_coords[i][3]:
+                line_to_delete = i
+                with open('currentlyWatchingMovieData.txt', 'r') as file:
+                    lines = file.readlines()
+                file.close()
+                with open('currentlyWatchingMovieData.txt', "w") as f:
+                    for i, line in enumerate(lines):
+                        if i != line_to_delete:
+                            f.write(line)
+                        else:
+                            with open('watchedMovieData.txt', "a") as watched_f:
+                                watched_f.write(line)
+                win.close()
+                refresh_main_page()
+                f.close()
+                watched_f.close()
         if (click.getX() >= 750 and click.getX() <= 850 and click.getY() >= 10 and click.getY() <= 35):
             win.close()
             movie_coords.clear()

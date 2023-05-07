@@ -1,4 +1,3 @@
-the last Jedi,5,I liked it,Movie_Images/The_Last_Jedi_resized.png
 Spiderman,4,i like it,Movie_Images/Spider_Man_resized.png
 Spiderman,4,i like it,Movie_Images/Spider_Man_resized.png
-Spiderman,4,i like it,Movie_Images/Spider_Man_resized.png
+The Super Mario Bros Movie,3,yay finally got to it,Movie_Images/The Super Mario Bros Movie_resized.png
