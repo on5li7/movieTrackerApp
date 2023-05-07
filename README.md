@@ -5,3 +5,11 @@ You should do this based off of the language, and you can find a list of [differ
 
 # Technical Debt Assignment
 Read the [TechDebt](TechDebt.md) file. 
+
+# General Overview
+
+# Features Currently Implemented
+
+# Instructions on Downloading the App
+
+# For More Info 
