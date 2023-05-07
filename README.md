@@ -15,4 +15,4 @@ Read the [TechDebt](TechDebt.md) file.
 # For More Info 
 
 [Customer Notes](customerNotes.md)
-[Traditional Report](traditionalReport.md) 
+[Traditional Report](TraditionalReport.md) 
