@@ -9,7 +9,7 @@ Read the [TechDebt](TechDebt.md) file.
 # General Overview
 This app lets the user keep track of the shows and movies they are planning to watch or have already watched. They can rate the things they watch and leave comments. There are three lists (Unwatched, Currently Watching, and Watched) that the user can move their shows and movies around on. 
 
-Screenshot 2023-05-08 200128.png
+C:\Users\trans\Pictures\Screenshots\Screenshot 2023-05-08 200128.png
 
 # Features Currently Implemented
 There is a menu page that the user can choose a list out of three options: Watched, Plan to Watch, or Currently Watching.
