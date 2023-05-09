@@ -21,6 +21,7 @@ By clicking Add Movie the user can add a new show/movie and its rating, image pa
 ![image](Movie_Images/AddMovie.png "add movie")
 
 The user can switch a movie/show from Unwatched to Currently Watching or from Currently Watching to Watched. To do this, they click the green button on the top left of the movie/show. 
+
 ![image](Movie_Images/SwitchMovie.png "Switch Movie")
 
 To view comments the user left, they click on the movie/show and an edit window pops up, showing the comment along with the title, image path, and rating. The edit feature is currently not implemented. 
