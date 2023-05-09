@@ -7,12 +7,30 @@ You should do this based off of the language, and you can find a list of [differ
 Read the [TechDebt](TechDebt.md) file. 
 
 # General Overview
+This app lets the user keep track of the shows and movies they are planning to watch or have already watched. They can rate the things they watch and leave comments. There are three lists (Unwatched, Currently Watching, and Watched) that the user can move their shows and movies around on. 
+
+Screenshot 2023-05-08 200128.png
 
 # Features Currently Implemented
+There is a menu page that the user can choose a list out of three options: Watched, Plan to Watch, or Currently Watching.
+
+When the user chooses a list they can switch to another list of their choice using the buttons on the top right. 
+Screenshot 2023-05-08 200145.png
+
+By clicking Add Movie the user can add a new show/movie and its rating, image path (to display an image) and comments.
+Screenshot 2023-05-08 200201.png
+
+The user can switch a movie/show from Unwatched to Currently Watching or from Currently Watching to Watched. To do this, they click the green button on the top left of the movie/show. 
+Screenshot 2023-05-08 200217.png
+
+To view comments the user left, they click on the movie/show and an edit window pops up, showing the comment along with the title, image path, and rating. The edit feature is currently not implemented. 
+Screenshot 2023-05-08 200234.png
 
 # Instructions on Downloading the App
+To use the app, the user runs the menu_page.py file of the project. This shows the menu, and the user can use the app however they like. 
 
 # For More Info 
 
 [Customer Notes](customerNotes.md)
+
 [Traditional Report](TraditionalReport.md) 
