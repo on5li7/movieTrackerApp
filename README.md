@@ -7,6 +7,7 @@ You should do this based off of the language, and you can find a list of [differ
 Read the [TechDebt](TechDebt.md) file. 
 
 # General Overview
+The project is coded using Python 3.10.11.
 This app lets the user keep track of the shows and movies they are planning to watch or have already watched. They can rate the things they watch and leave comments. There are three lists (Unwatched, Currently Watching, and Watched) that the user can move their shows and movies around on. 
 
 ![image](Movie_Images\Menu.png "menu")
