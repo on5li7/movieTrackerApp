@@ -1,8 +1,11 @@
 Movie Application
 
 Gafur Mammadov - Team member
+
 Ryan Phan - Team member
+
 Calvin Zhuang - Scrum Master
+
 Sophie Tran - Project owner
 
 # Project Objectives
@@ -30,8 +33,13 @@ For moving the movie data around, we decided  the number them in an order in the
 [Testing](Testing.md)
 
 # Retrospective: Project Highlights
-
+One of the good parts of the software is that it is fully working application with back and front end interfaces. We have implemented database system and the software is very functional that details of the movies are displayed neatly on the menu page. 
+One of the main things we were able to implement was pair programming. It generally helped every team member and by doing it we were able to solve the challanges easier and faster than usual. 
+The biggest trouble that we figured out was importing the pictures to the screen. Before we tried to find a way that program itself handles uploading the specific image, however, later on the easier solution was providing the path of the image. 
 
 # Retrospective: Things To Be Improved 
+We would like to work more on the UI design. It would be nice to make it more visually attractive. Besides that we think that adding more functionalities to the software would also be nice. Right now we are implementing the movie change only from one list to other. It would be nice to add that functionality to other lists as well. On top of that we would also like to add the functionality of uploading the image directly from choosing the Computer Drive (like most of the apps). 
 
+I think for the future it would be better to spend more time on dividing the work in between the team members. This would help us more to be efficient and create better quality software.
 # Lessons Learned 
+I would say future COMP 129 students should spend more  time on testing their software. Knowing how to work with testing technologies and doing them on time carefully will be very helpful for them in the future.
